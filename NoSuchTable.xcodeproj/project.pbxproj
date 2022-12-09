@@ -12,19 +12,13 @@
 		1587CDAA2940E571002EF779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1587CDA92940E571002EF779 /* Assets.xcassets */; };
 		1587CDAD2940E571002EF779 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1587CDAC2940E571002EF779 /* Preview Assets.xcassets */; };
 		1587CDB72940E572002EF779 /* NoSuchTableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587CDB62940E572002EF779 /* NoSuchTableTests.swift */; };
-		1587CDC12940E572002EF779 /* NoSuchTableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587CDC02940E572002EF779 /* NoSuchTableUITests.swift */; };
-		1587CDC32940E572002EF779 /* NoSuchTableUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587CDC22940E572002EF779 /* NoSuchTableUITestsLaunchTests.swift */; };
+		1587CDD02940E599002EF779 /* ModelInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1587CDCF2940E599002EF779 /* ModelInApp.swift */; };
+		1587CDD32940E5DA002EF779 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 1587CDD22940E5DA002EF779 /* GRDB */; };
+		1587CDD62940E882002EF779 /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 1587CDD52940E882002EF779 /* GRDB */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		1587CDB32940E572002EF779 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1587CD9A2940E570002EF779 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1587CDA12940E570002EF779;
-			remoteInfo = NoSuchTable;
-		};
-		1587CDBD2940E572002EF779 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1587CD9A2940E570002EF779 /* Project object */;
 			proxyType = 1;
@@ -41,9 +35,7 @@
 		1587CDAC2940E571002EF779 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1587CDB22940E572002EF779 /* NoSuchTableTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoSuchTableTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1587CDB62940E572002EF779 /* NoSuchTableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSuchTableTests.swift; sourceTree = "<group>"; };
-		1587CDBC2940E572002EF779 /* NoSuchTableUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoSuchTableUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1587CDC02940E572002EF779 /* NoSuchTableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSuchTableUITests.swift; sourceTree = "<group>"; };
-		1587CDC22940E572002EF779 /* NoSuchTableUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoSuchTableUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1587CDCF2940E599002EF779 /* ModelInApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelInApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1587CDD32940E5DA002EF779 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1587CDB92940E572002EF779 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1587CDD62940E882002EF779 /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +63,8 @@
 			children = (
 				1587CDA42940E570002EF779 /* NoSuchTable */,
 				1587CDB52940E572002EF779 /* NoSuchTableTests */,
-				1587CDBF2940E572002EF779 /* NoSuchTableUITests */,
 				1587CDA32940E570002EF779 /* Products */,
+				1587CDD42940E882002EF779 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,7 +73,6 @@
 			children = (
 				1587CDA22940E570002EF779 /* NoSuchTable.app */,
 				1587CDB22940E572002EF779 /* NoSuchTableTests.xctest */,
-				1587CDBC2940E572002EF779 /* NoSuchTableUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -96,6 +82,7 @@
 			children = (
 				1587CDA52940E570002EF779 /* NoSuchTableApp.swift */,
 				1587CDA72940E570002EF779 /* ContentView.swift */,
+				1587CDCF2940E599002EF779 /* ModelInApp.swift */,
 				1587CDA92940E571002EF779 /* Assets.xcassets */,
 				1587CDAB2940E571002EF779 /* Preview Content */,
 			);
@@ -118,13 +105,11 @@
 			path = NoSuchTableTests;
 			sourceTree = "<group>";
 		};
-		1587CDBF2940E572002EF779 /* NoSuchTableUITests */ = {
+		1587CDD42940E882002EF779 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1587CDC02940E572002EF779 /* NoSuchTableUITests.swift */,
-				1587CDC22940E572002EF779 /* NoSuchTableUITestsLaunchTests.swift */,
 			);
-			path = NoSuchTableUITests;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +128,9 @@
 			dependencies = (
 			);
 			name = NoSuchTable;
+			packageProductDependencies = (
+				1587CDD22940E5DA002EF779 /* GRDB */,
+			);
 			productName = NoSuchTable;
 			productReference = 1587CDA22940E570002EF779 /* NoSuchTable.app */;
 			productType = "com.apple.product-type.application";
@@ -161,27 +149,12 @@
 				1587CDB42940E572002EF779 /* PBXTargetDependency */,
 			);
 			name = NoSuchTableTests;
+			packageProductDependencies = (
+				1587CDD52940E882002EF779 /* GRDB */,
+			);
 			productName = NoSuchTableTests;
 			productReference = 1587CDB22940E572002EF779 /* NoSuchTableTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1587CDBB2940E572002EF779 /* NoSuchTableUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1587CDCC2940E572002EF779 /* Build configuration list for PBXNativeTarget "NoSuchTableUITests" */;
-			buildPhases = (
-				1587CDB82940E572002EF779 /* Sources */,
-				1587CDB92940E572002EF779 /* Frameworks */,
-				1587CDBA2940E572002EF779 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1587CDBE2940E572002EF779 /* PBXTargetDependency */,
-			);
-			name = NoSuchTableUITests;
-			productName = NoSuchTableUITests;
-			productReference = 1587CDBC2940E572002EF779 /* NoSuchTableUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -200,10 +173,6 @@
 						CreatedOnToolsVersion = 14.1;
 						TestTargetID = 1587CDA12940E570002EF779;
 					};
-					1587CDBB2940E572002EF779 = {
-						CreatedOnToolsVersion = 14.1;
-						TestTargetID = 1587CDA12940E570002EF779;
-					};
 				};
 			};
 			buildConfigurationList = 1587CD9D2940E570002EF779 /* Build configuration list for PBXProject "NoSuchTable" */;
@@ -215,13 +184,15 @@
 				Base,
 			);
 			mainGroup = 1587CD992940E570002EF779;
+			packageReferences = (
+				1587CDD12940E5DA002EF779 /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+			);
 			productRefGroup = 1587CDA32940E570002EF779 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				1587CDA12940E570002EF779 /* NoSuchTable */,
 				1587CDB12940E572002EF779 /* NoSuchTableTests */,
-				1587CDBB2940E572002EF779 /* NoSuchTableUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -243,13 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1587CDBA2940E572002EF779 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1587CDD02940E599002EF779 /* ModelInApp.swift in Sources */,
 				1587CDA82940E570002EF779 /* ContentView.swift in Sources */,
 				1587CDA62940E570002EF779 /* NoSuchTableApp.swift in Sources */,
 			);
@@ -270,15 +235,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1587CDB82940E572002EF779 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1587CDC12940E572002EF779 /* NoSuchTableUITests.swift in Sources */,
-				1587CDC32940E572002EF779 /* NoSuchTableUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -286,11 +242,6 @@
 			isa = PBXTargetDependency;
 			target = 1587CDA12940E570002EF779 /* NoSuchTable */;
 			targetProxy = 1587CDB32940E572002EF779 /* PBXContainerItemProxy */;
-		};
-		1587CDBE2940E572002EF779 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1587CDA12940E570002EF779 /* NoSuchTable */;
-			targetProxy = 1587CDBD2940E572002EF779 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -345,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -399,7 +350,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -424,6 +375,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,6 +383,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.NoSuchTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,6 +407,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -459,6 +415,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.NoSuchTable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -473,10 +432,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.NoSuchTableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,48 +454,17 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = me.NoSuchTableTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoSuchTable.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/NoSuchTable";
-			};
-			name = Release;
-		};
-		1587CDCD2940E572002EF779 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.NoSuchTableUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NoSuchTable;
-			};
-			name = Debug;
-		};
-		1587CDCE2940E572002EF779 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = me.NoSuchTableUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NoSuchTable;
 			};
 			name = Release;
 		};
@@ -567,16 +498,31 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1587CDCC2940E572002EF779 /* Build configuration list for PBXNativeTarget "NoSuchTableUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1587CDCD2940E572002EF779 /* Debug */,
-				1587CDCE2940E572002EF779 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1587CDD12940E5DA002EF779 /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1587CDD22940E5DA002EF779 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1587CDD12940E5DA002EF779 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		1587CDD52940E882002EF779 /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1587CDD12940E5DA002EF779 /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1587CD9A2940E570002EF779 /* Project object */;
 }

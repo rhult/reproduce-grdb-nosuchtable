@@ -6,30 +6,80 @@
 //
 
 import XCTest
+import GRDB
 @testable import NoSuchTable
+
+struct ModelInTest: Codable, Identifiable {
+    static var databaseTableName: String = "testModel"
+    let id: String
+}
+extension ModelInTest: FetchableRecord, TableRecord, PersistableRecord { }
+
+private func createDatabaseInTest() throws -> DatabaseWriter {
+    let database: DatabaseWriter
+    let path = documentsURL().appendingPathComponent(UUID().uuidString).path
+    database = try DatabasePool(path: path)
+
+    return database
+}
+
+private func migrateInTest(database: DatabaseWriter) throws {
+    var migrator = DatabaseMigrator()
+
+    migrator.registerMigration("v1") { db in
+        try db.execute(sql: v1)
+    }
+
+    try migrator.migrate(database)
+}
+
+private func writeModelInTest(database: DatabaseWriter) throws {
+    try database.write { db in
+        let model = ModelInTest(id: "id")
+        try model.save(db)
+    }
+}
 
 final class NoSuchTableTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    // OK
+    func test1() throws {
+        let database = try createDatabaseInTest()
+        try migrateInTest(database: database)
+        try writeModelInTest(database: database)
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    // OK
+    func test2() throws {
+        let database = try createDatabaseInApp()
+        try migrateInApp(database: database)
+        try writeModelInApp(database: database)
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    // "Database was not used on the correct thread"
+    func test3() throws {
+        let database = try createDatabaseInApp()
+        try migrateInTest(database: database)
+        try writeModelInApp(database: database)
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    // "Database was not used on the correct thread"
+    func test4() throws {
+        let database = try createDatabaseInApp()
+        try migrateInApp(database: database)
+
+        try database.write { db in
+            try saveModelInApp(db)
+        }
+    }
+
+    // "SQLite error 1: no such table: testModel"
+    func test5() throws {
+        let database = try createDatabaseInTest()
+        try migrateInTest(database: database)
+
+        try database.write { db in
+            try saveModelInApp(db)
         }
     }
 
